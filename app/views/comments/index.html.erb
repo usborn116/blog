@@ -1,0 +1,13 @@
+<h1>Comments</h1>
+
+This article has <%= @comments.count %> articles and counting!
+
+<ul>
+  <% @comments.each do |comment| %>
+      <li>
+        <%=  comment.body %>
+      </li>
+  <% end %>
+</ul>
+
+<%= link_to "New Comment", new_article_comment_path %>
